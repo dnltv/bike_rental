@@ -2,6 +2,7 @@ from pathlib import Path
 
 BASE_DIR = Path(__file__).resolve().parent.parent
 
+# В продакшене ключ передадим через переменные окружения
 SECRET_KEY = 'django-insecure-_iu!vu#g9)od5*mhir1)xy1vrp9-&q&9sb67mye5*qy)tt2ti$'
 
 DEBUG = True
@@ -15,6 +16,8 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'rest_framework',
+    'rentals',
 ]
 
 MIDDLEWARE = [
