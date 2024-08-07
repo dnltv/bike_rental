@@ -3,8 +3,8 @@ from rest_framework.routers import DefaultRouter
 from rest_framework_simplejwt.views import (TokenObtainPairView,
                                             TokenRefreshView)
 
-from bike_rental.rentals.views import BikeViewSet, RentalViewSet
-from bike_rental.users.views import UserCreate
+from .views import BikeViewSet, RentalViewSet
+from users.views import UserCreate
 
 app_name = 'rentals'
 
