@@ -17,3 +17,11 @@ class Bike(models.Model):
     def __str__(self):
         return self.name
 
+
+class Rental(models.Model):
+    """
+    Модель для представления аренды велосипеда.
+    """
+    bike = models.ForeignKey(Bike, on_delete=models.CASCADE)
+    start_time = models.DateTimeField(auto_now_add=True)
+    end_time = models.DateTimeField(null=True, blank=True)
