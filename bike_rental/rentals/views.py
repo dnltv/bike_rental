@@ -1,4 +1,5 @@
 from rest_framework.viewsets import ModelViewSet
+
 from .models import Bike, Rental
 from .serializers import BikeSerializer, RentalSerializer
 
