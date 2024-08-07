@@ -16,6 +16,9 @@ class RentalViewSet(ModelViewSet):
     queryset = Rental.objects.all()
     serializer_class = RentalSerializer
 
+    def get_queryset(self):
+        return Rental.objects.filter(user=self.request.user)
+
     @action(detail=True, methods=['post'])
     def end_rental(self, request, pk=None):
         rental = self.get_object()
