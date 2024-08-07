@@ -1,4 +1,5 @@
 import pytest
+
 from bike_rental.rentals.models import Bike, Rental
 
 

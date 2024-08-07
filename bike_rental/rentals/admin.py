@@ -1,7 +1,6 @@
-from django.contrib.admin import register, site, ModelAdmin
+from django.contrib.admin import ModelAdmin, register, site
 
 from .models import Bike, Rental
-
 
 site.empty_value_display = '-empty-'
 
@@ -18,4 +17,3 @@ class RentalAdmin(ModelAdmin):
     search_fields = ('user', 'bike')
     list_display = ()
     list_filter = ()
-

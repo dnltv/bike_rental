@@ -1,6 +1,7 @@
 from celery import shared_task
 from django.conf import settings
 from django.utils import timezone
+
 from .models import Rental
 
 

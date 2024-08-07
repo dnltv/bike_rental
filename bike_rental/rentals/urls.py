@@ -1,10 +1,11 @@
-from django.urls import path, include
+from django.urls import include, path
 from rest_framework.routers import DefaultRouter
 from rest_framework_simplejwt.views import (TokenObtainPairView,
                                             TokenRefreshView)
 
-from .views import BikeViewSet, RentalViewSet
 from users.views import UserCreate
+
+from .views import BikeViewSet, RentalViewSet
 
 app_name = 'rentals'
 
