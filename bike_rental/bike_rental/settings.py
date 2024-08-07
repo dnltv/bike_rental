@@ -1,13 +1,17 @@
+import os
 from pathlib import Path
 
 BASE_DIR = Path(__file__).resolve().parent.parent
 
 # В продакшене ключ передадим через переменные окружения
-SECRET_KEY = 'django-insecure-_iu!vu#g9)od5*mhir1)xy1vrp9-&q&9sb67mye5*qy)tt2ti$'
+SECRET_KEY = os.getenv(
+    'DJANGO_TOKEN',
+    default='django-insecure-_iu!vu#g9)od5*mhir1)xy1vrp9-&q&9sb67mye5*qy)tt2ti$'
+)
 
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*']
 
 INSTALLED_APPS = [
     'django.contrib.admin',
@@ -80,11 +84,8 @@ AUTH_PASSWORD_VALIDATORS = [
 ]
 
 LANGUAGE_CODE = 'en-us'
-
 TIME_ZONE = 'UTC'
-
 USE_I18N = True
-
 USE_TZ = True
 
 STATIC_URL = 'static/'
